@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Liste des personnages de sexe {{ sexe }}:<br/>
+    <ul>
+        {% for personnage in personnages %}
+        <li>
+    Nom : {{ personnage.nom }}<br/>
+    Prenom : {{ personnage.prenom }}<br/>
+    Royaume : {{ personnage.royaume.nom }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
